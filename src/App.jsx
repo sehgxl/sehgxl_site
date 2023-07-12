@@ -27,7 +27,7 @@ function App() {
           </a>
           <a
             target="_blank"
-            href="https://drive.google.com/file/d/1Efand3sDVJO0NHvOxoAqWHhuqamQgloE/view?usp=sharing"
+            href="https://drive.google.com/file/d/1aERhl8ETDqInYLnqaHn6WYnEgEyO5Y8g/view?usp=sharing"
             rel="noreferrer"
           >
             <img className="w-3 sm:w-4" src={resume} alt="" />
