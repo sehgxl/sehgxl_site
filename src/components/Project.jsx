@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import internet from "../assets/internet.svg";
-import github from "../assets/github.svg";
-// import chromExt from "../assets/chromeExt.png";
+import internet from "/public/internet.svg";
+import github from "/public/github.svg";
+// import chromExt from "/public/chromeExt.png";
 
 // eslint-disable-next-line react/prop-types
 const Project = ({ description, imageLink, siteLink, gitLink }) => {

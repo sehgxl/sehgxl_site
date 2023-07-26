@@ -21,9 +21,7 @@ const IconBtn = ({ siteLink, imageLink }) => {
       <a target="_blank" href={siteLink} rel="noreferrer">
         <img
           className={
-            imageLink === "../assets/resume.svg"
-              ? "w-4 sm:w-5"
-              : " w-5 sm:w-6  "
+            imageLink === "/public/resume.svg" ? "w-4 sm:w-5" : " w-5 sm:w-6  "
           }
           src={img}
           alt="img"

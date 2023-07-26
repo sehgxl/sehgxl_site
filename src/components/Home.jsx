@@ -5,24 +5,24 @@ const Home = () => {
   const links = [
     {
       siteLink: "https://github.com/sehgxl",
-      imgPath: "../assets/github.svg",
+      imgPath: "/public/github.svg",
     },
     {
       siteLink: "https://www.linkedin.com/in/abhinav-sehgal-1a6994145/",
-      imgPath: "../assets/linkedin.svg",
+      imgPath: "/public/linkedin.svg",
     },
     {
       siteLink: "https://twitter.com/sehgxl",
-      imgPath: "../assets/twitter.svg",
+      imgPath: "/public/twitter.svg",
     },
     {
       siteLink:
         "https://drive.google.com/file/d/1aERhl8ETDqInYLnqaHn6WYnEgEyO5Y8g/view",
-      imgPath: "../assets/resume.svg",
+      imgPath: "/public/resume.svg",
     },
     {
       siteLink: "mailto:abhinavsehgal802@gmail.com",
-      imgPath: "../assets/email.svg",
+      imgPath: "/public/email.svg",
     },
   ];
 
