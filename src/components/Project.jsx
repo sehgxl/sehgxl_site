@@ -1,6 +1,6 @@
-import internet from "/public/internet.svg";
-import github from "/public/github.svg";
-// import chromExt from "/public/chromeExt.png";
+import internet from "/internet.svg";
+import github from "/github.svg";
+// import chromExt from "/chromeExt.png";
 
 // eslint-disable-next-line react/prop-types
 const Project = ({ description, imageLink, siteLink, gitLink }) => {
