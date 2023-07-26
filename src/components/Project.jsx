@@ -1,28 +1,14 @@
-import { useEffect, useState } from "react";
 import internet from "/public/internet.svg";
 import github from "/public/github.svg";
 // import chromExt from "/public/chromeExt.png";
 
 // eslint-disable-next-line react/prop-types
 const Project = ({ description, imageLink, siteLink, gitLink }) => {
-  const [img, setimg] = useState("");
-  useEffect(() => {
-    const getImage = async () => {
-      let res = await import(imageLink);
-      res = res.default;
-      if (res.startsWith("/@fs")) {
-        res = res.substring(4);
-      }
-
-      setimg(res);
-    };
-    getImage();
-  }, [imageLink]);
   return (
     <section className="flex flex-col justify-between items-center gap-2 max-h-96 border-l-4 border-neutral-500 bg-neutral-900 pb-4 rounded-2xl">
       <img
         className="h-60 rounded-t-2xl w-full object-cover"
-        src={img}
+        src={imageLink}
         alt="Image"
       />
 
