@@ -3,7 +3,17 @@ import github from "/github.svg";
 // import chromExt from "/chromeExt.png";
 
 // eslint-disable-next-line react/prop-types
-const Project = ({ description, imageLink, siteLink, gitLink }) => {
+const Project = ({
+  description,
+  imageLink,
+  siteLink,
+  gitLink,
+}: {
+  description: string;
+  imageLink: string;
+  siteLink: string;
+  gitLink: string;
+}) => {
   return (
     <section className="flex flex-col justify-between items-center gap-2 max-h-96 border-l-4 border-neutral-500 bg-neutral-900 pb-4 rounded-2xl">
       <img
