@@ -1,16 +1,54 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import IconBtn from "./IconBtn"
 import { motion } from "framer-motion"
 import { socials } from "../ProjectLinks"
+import { useCallback, useEffect } from "react"
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@radix-ui/react-tooltip"
 const Home = () => {
+  const Navigate = useNavigate()
+  const onKeyDown = useCallback((event: KeyboardEvent) => {
+    if (event.altKey && event.key === "w") {
+      event.preventDefault()
+      Navigate("/work")
+    }
+  }, [])
+
+  useEffect(() => {
+    document.addEventListener("keydown", onKeyDown, false)
+
+    return () => {
+      document.removeEventListener("keydown", onKeyDown, false)
+    }
+  }, [onKeyDown])
   return (
     <section className="flex min-h-screen items-center justify-center bg-neutral-950 font-mono text-neutral-200 ">
       <div className="flex h-screen flex-col items-center justify-between py-8">
-        <Link to="/work">
-          <button className="rounded-xl border-2 border-neutral-800 bg-neutral-950 px-4 py-2 text-center text-xl transition duration-200 ease-out hover:scale-110  ">
-            Work
-          </button>
-        </Link>
+        <TooltipProvider>
+          <Tooltip delayDuration={0}>
+            <TooltipTrigger asChild>
+              <Link to="/work">
+                <button className="rounded-xl border-2 border-neutral-800 bg-neutral-950 px-4 py-2 text-center text-xl transition duration-200 ease-out hover:scale-110  ">
+                  Work
+                </button>
+              </Link>
+            </TooltipTrigger>
+            <TooltipContent
+              className="TooltipContentDown"
+              side="bottom"
+              sideOffset={10}
+            >
+              <p className=" rounded-lg bg-neutral-900 px-3 py-1 text-center text-xl shadow-inner shadow-neutral-600">
+                ⌥+w
+              </p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

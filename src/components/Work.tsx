@@ -6,6 +6,13 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { socials } from "../ProjectLinks"
 import IconBtn from "./IconBtn"
 import { useRef } from "react"
+import { useNavigate } from "react-router-dom"
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@radix-ui/react-tooltip"
 import {
   Navigation,
   Pagination,
@@ -14,8 +21,9 @@ import {
   EffectFade,
   FreeMode,
 } from "swiper/modules"
+
 import "swiper/css"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useCallback } from "react"
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window
   return {
@@ -41,6 +49,21 @@ function useWindowDimensions() {
   return windowDimensions
 }
 const Work = () => {
+  const Navigate = useNavigate()
+  const onKeyDown = useCallback((event: KeyboardEvent) => {
+    if (event.altKey && event.key === "h") {
+      event.preventDefault()
+      Navigate("/")
+    }
+  }, [])
+
+  useEffect(() => {
+    document.addEventListener("keydown", onKeyDown, false)
+
+    return () => {
+      document.removeEventListener("keydown", onKeyDown, false)
+    }
+  }, [onKeyDown])
   const slidesPerView = useRef(2)
   const spaceBetween = useRef(100)
   const freeMode = useRef(true)
@@ -58,13 +81,29 @@ const Work = () => {
 
   return (
     <div
-      className={`flex min-h-screen flex-col items-center  justify-between overflow-hidden  bg-neutral-950 py-8  text-neutral-200 sm:gap-8`}
+      className={`flex min-h-screen flex-col items-center  justify-between overflow-hidden bg-neutral-950  py-8 font-mono  text-neutral-200 sm:gap-8`}
     >
-      <Link to="/">
-        <button className="rounded-xl border-2 border-neutral-800 bg-neutral-950 px-4 py-2 text-center text-xl transition duration-200 ease-out hover:scale-110  ">
-          Home
-        </button>
-      </Link>
+      <TooltipProvider>
+        <Tooltip delayDuration={0}>
+          <TooltipTrigger asChild>
+            <Link to="/">
+              <button className="rounded-xl border-2 border-neutral-800 bg-neutral-950 px-4 py-2 text-center text-xl transition duration-200 ease-out hover:scale-110  ">
+                Home
+              </button>
+            </Link>
+          </TooltipTrigger>
+          <TooltipContent
+            className="TooltipContentDown"
+            side="bottom"
+            sideOffset={10}
+          >
+            <p className="rounded-lg bg-neutral-900 px-3 py-1 text-xl shadow-inner shadow-neutral-600">
+              ⌥+h
+            </p>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
+
       {/* border-2 border-red-500  */}
 
       <motion.div
@@ -72,7 +111,7 @@ const Work = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0, transition: { duration: 0.1 } }}
         transition={{ duration: 0.5 }}
-        className=" w-screen font-mono"
+        className=" w-screen "
       >
         {/* <section className="mt-4 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3"> */}
 

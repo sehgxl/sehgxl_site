@@ -30,7 +30,7 @@ const IconBtn = ({
             </div>
           </a>
         </TooltipTrigger>
-        <TooltipContent className="TooltipContent" sideOffset={37}>
+        <TooltipContent className="TooltipContent" sideOffset={35}>
           <p className="rounded-lg bg-neutral-900 px-3 py-1 text-sm shadow-inner shadow-neutral-600">
             {title}
           </p>
