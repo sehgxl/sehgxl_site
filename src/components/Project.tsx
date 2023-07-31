@@ -1,7 +1,7 @@
 import internet from "/internet.svg"
 import github from "/github.svg"
 import { Suspense, lazy, useState } from "react"
-const Mac = lazy(() => import("./Mac"))
+import Mac from "./Mac"
 
 function Loading() {
   console.log("Loading")
@@ -22,7 +22,6 @@ const Project = ({
 }) => {
   return (
     <section className="z-30 flex flex-col items-center ">
-      <Suspense fallback={<Loading />}></Suspense>
       <Mac imageLink={imageLink} />
 
       <div className="z-20 flex flex-row items-center gap-6 ">
