@@ -43,14 +43,17 @@ function useWindowDimensions() {
 const Work = () => {
   const slidesPerView = useRef(2)
   const spaceBetween = useRef(100)
+  const freeMode = useRef(true)
 
   const { height, width } = useWindowDimensions()
   if (width < 877) {
     slidesPerView.current = 1
     spaceBetween.current = 0
+    freeMode.current = false
   } else {
     slidesPerView.current = 2
     spaceBetween.current = 100
+    freeMode.current = true
   }
 
   return (
@@ -84,7 +87,7 @@ const Work = () => {
           // onSwiper={(swiper) => console.log(swiper)}
           // onSlideChange={() => console.log("slide change")}
           centeredSlides={true}
-          freeMode={true}
+          freeMode={freeMode.current}
           grabCursor={true}
         >
           {ProjectLinks.map((project, idx) => {

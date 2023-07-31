@@ -1,5 +1,11 @@
 export const ProjectLinks = [
   {
+    description: "Discord Clone UI made using React and Tailwind",
+    imageLink: "/discord.gif",
+    siteLink: "https://discord-ui-clone-nine.vercel.app/",
+    gitLink: "https://github.com/sehgxl/Discord-UI-Clone",
+  },
+  {
     description: "Minimal News App made using React and Tailwind ",
     imageLink: "/newstack.gif",
     siteLink: "https://newstack.vercel.app/",
@@ -7,50 +13,45 @@ export const ProjectLinks = [
   },
   {
     description: "Twitter Clone made using React and Tailwind",
-    imageLink: "/twitter.png",
+    imageLink: "/twitter.gif",
     siteLink: "https://twitter-clone-sehgxl.vercel.app/",
     gitLink: "https://github.com/sehgxl/Twitter-Clone",
   },
-  {
-    description: "Discord Clone UI made using React and Tailwind",
-    imageLink: "/discord.png",
-    siteLink: "https://discord-ui-clone-nine.vercel.app/",
-    gitLink: "https://github.com/sehgxl/Discord-UI-Clone",
-  },
+
   {
     description: "Minimal Calculator App made using Vanilla JS",
-    imageLink: "/calculator.png",
+    imageLink: "/calculator.gif",
     siteLink: "https://sehgxl.github.io/Minimal-Calculator-App/",
     gitLink: "https://github.com/sehgxl/Minimal-Calculator-App",
   },
   {
     description:
       "Chrome Extension for summarising any article on the web using gpt",
-    imageLink: "/chromeExt.png",
+    imageLink: "/chromeExt.gif",
     siteLink: "https://github.com/sehgxl/readmojo-frontend",
     gitLink: "https://github.com/sehgxl/readmojo-frontend",
   },
   {
     description: "To Do List App made using Vanilla JS ",
-    imageLink: "/todo.png",
+    imageLink: "/todo.gif",
     siteLink: "https://sehgxl.github.io/To-Do-List-App//",
     gitLink: "https://github.com/sehgxl/To-Do-List-App",
   },
   {
     description: "Shape Clicker game made using Vanilla JS ",
-    imageLink: "/shapeclicker.png",
+    imageLink: "/shapeclicker.gif",
     siteLink: "https://sehgxl.github.io/Shape-Clicker/",
     gitLink: "https://github.com/sehgxl/Shape-Clicker",
   },
   {
     description: "Typing speed game made using Vanilla JS",
-    imageLink: "/typingspeed.png",
+    imageLink: "/typingspeed.gif",
     siteLink: "https://sehgxl.github.io/typing-speed/",
     gitLink: "https://github.com/sehgxl/typing-speed",
   },
   {
     description: "Quiz game made using Vanilla JS ",
-    imageLink: "/quiz.png",
+    imageLink: "/quiz.gif",
     siteLink: "https://sehgxl.github.io/Quiz-App/",
     gitLink: "https://github.com/sehgxl/Quiz-App",
   },
