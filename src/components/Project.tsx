@@ -1,11 +1,24 @@
 import internet from "/internet.svg"
 import github from "/github.svg"
-import { Suspense, lazy, useState } from "react"
-import Mac from "./Mac"
+import { Suspense, lazy } from "react"
+
+const Mac = lazy(
+  () =>
+    // {
+    // return new Promise((resolve) => setTimeout(resolve, 1000)).then(
+    //   () =>
+    // )
+    import("./Mac")
+  // }
+)
 
 function Loading() {
   console.log("Loading")
-  return <div className="text-3xl">Loading</div>
+  return (
+    <div className="relative flex h-[26rem] w-[47rem] scale-[0.5] animate-pulse items-center justify-center text-3xl 545px:scale-[0.9] 877px:scale-[0.8] 1155px:scale-[0.9] 1341px:scale-[1]">
+      Loading...
+    </div>
+  )
 }
 
 // eslint-disable-next-line react/prop-types
@@ -22,8 +35,9 @@ const Project = ({
 }) => {
   return (
     <section className="z-30 flex flex-col items-center ">
-      <Mac imageLink={imageLink} />
-
+      <Suspense fallback={<Loading />}>
+        <Mac imageLink={imageLink} />
+      </Suspense>
       <div className="z-20 flex flex-row items-center gap-6 ">
         <a
           target="_blank"
