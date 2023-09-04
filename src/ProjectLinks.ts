@@ -76,7 +76,7 @@ export const socials = [
   {
     title: "Wanna hire? Here is my resume",
     siteLink:
-      "https://drive.google.com/file/d/1aERhl8ETDqInYLnqaHn6WYnEgEyO5Y8g/view",
+      "https://drive.google.com/drive/folders/1d2ymq4-b40MADZdrJkk4VtQdPZzsLr0Y?usp=drive_link",
     imgPath: "/resume.svg",
   },
   {
