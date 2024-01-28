@@ -25,6 +25,10 @@ const presentation: Presentation = {
       label: "Github",
       link: "https://github.com/sehgxl",
     },
+    {
+      label : "Resume",
+      link : "https://drive.google.com/drive/folders/1d2ymq4-b40MADZdrJkk4VtQdPZzsLr0Y?usp=drive_link"
+    }
   ],
 };
 
