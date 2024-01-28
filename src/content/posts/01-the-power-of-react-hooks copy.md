@@ -22,4 +22,6 @@ isPublish: true
 
 - When using context, make sure that value property is always memoised if it’s not a number, string or boolean.
 
-- React components re-render when when component's state changed, when parent component re-renders, when a component uses context and the value of its provider changes and when hooks change (Everything that is happening inside a hook “belongs” to the component that uses it)
+- React components re-render when a component's state changes, when a parent component re-renders, when a component uses context and the value of its provider changes, when hooks change 
+
+- Everything that is happening inside a hook “belongs” to the component that uses it
