@@ -1,7 +1,7 @@
 ---
 title: "React Notes"
 publishedAt: 2024-01-29
-description: "Some react pointers that I liked to wrote + copy-pasted from other sites to understand React better"
+description: "Some react pointers that I wrote + copy-pasted(mostly, after all I am a dev) from other sites to understand React better"
 slug: "react-notes"
 isPublish: true
 ---
