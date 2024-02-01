@@ -19,7 +19,7 @@ const openGraph = {
   image: og?.image || "/opengraph-image.jpg",
   alt: og?.alt || "astro portfolio template image",
   url: DEFAULT_URL_SITE,
-  description: og?.description || DEFAULT_DESCRIPTION_PAGE,
+  description: DEFAULT_DESCRIPTION_PAGE,
 };
 ---
 
@@ -27,7 +27,7 @@ const openGraph = {
   <SEO
     charset="UTF-8"
     title={title || DEFAULT_TITLE_PAGE}
-    description={description || DEFAULT_DESCRIPTION_PAGE}
+    description={ DEFAULT_DESCRIPTION_PAGE}
     noindex={noindex || false}
     openGraph={{
       basic: {
